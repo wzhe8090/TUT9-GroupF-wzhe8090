@@ -1,48 +1,42 @@
-### 1.如何与作品互动的说明；
+### 1. Instructions on how to interact with the artwork;
 
-每一帧通过random种子和噪音函数驱动，生成1000个粒子，根据时间的变化，形成一幅画。
+Each frame is driven by a random seed and a noise function that generates 1000 particles that form a painting based on time.
 
-### 2.详细介绍您为组代码制作动画的个人方法。
+### 2. A detailed description of your personal approach to animating group codes.
 
-Perlin 噪音 和时间， 每秒渲染1000个粒子，组成画面
+Perlin noise and time, rendering 1000 particles per second to form a picture
 
-### 3.图像的哪些属性将被动画化，如何动画化；
+### 3. Which properties of an image will be animated and how;
 
-每一帧都有独特的随机种子，和噪音值。来驱动粒子生成画面。
+Each frame has a unique random seed, and noise value. to drive the particles to generate the frame.
 
-### 4.参考您的单个代码的动画制作灵感；这些灵感可以是图片（静态图片或 gif）。它们对您提交的作品有何影响？
+### 4. refer to the inspiration for the animation of your individual code; these can be images (still images or gifs). How do they affect your submission?
 
-灵感随便编一个
+Make up a random inspiration
 
-### 5.简短的技术解释，说明您的单个代码是如何将图像制作成动画的，并提供适当的参考资料。
+### 5. A short technical explanation of how your individual code animates an image, with appropriate references.
 
-通过使用p5.js库来创建一个动画效果。
+Create an animation effect by using the p5.js library.
 
-它首先在`setup`函数中加载一张图像，并将其大小调整为画布的大小。然后在`draw`函数中，每秒生成1000个动画粒子。
+It is firstly in the `setup` function where an image is loaded and resized to the size of the canvas. Then in the `draw` function, 1000 animated particles are generated per second.
 
-每个粒子的位置（x，y）是在画布的宽度和高度范围内随机选择的。
+The position (x, y) of each particle is chosen randomly within the width and height of the canvas.
 
-然后，从图像中获取该位置的颜色，并将颜色的饱和度和色调映射为矩形的长度和角度。
+Then, the colour of that position is taken from the image and the saturation and hue of the colour is mapped to the length and angle of the rectangle.
 
-接着，计算噪音值并用它来调整矩形的长度和角度。
+Next, a noise value is calculated and used to adjust the length and angle of the rectangle.
 
-噪音值是通过`noise`函数计算得到的，它基于x和y的值生成一个在0到1之间的随机数。
+The noise value is calculated using the `noise` function, which generates a random number between 0 and 1 based on the x and y values.
 
-然后，设置填充颜色为图像在该位置的颜色，并保存当前的绘图样式和变换。
+The fill colour is then set to the colour of the image at that position and the current drawing style and transformations are saved.
 
-将画布移动到随机选择的位置，旋转矩形，然后绘制矩形。最后，恢复之前保存的绘图样式和变换。
+Move the canvas to the randomly selected position, rotate the rectangle, and draw the rectangle. Finally, restore the previously saved drawing style and transform.
 
-这样，每个粒子都会在其位置绘制一个小矩形，颜色和形状由图像在该位置的颜色决定，从而创建出一种动态的、基于图像颜色的动画效果。
+In this way, each particle draws a small rectangle at its position, with the colour and shape determined by the colour of the image at that position, creating a dynamic, image-colour based animation effect.
 
-参考资料：
+Reference:
 
 1. [p5.js官方文档]([home | p5.js (p5js.org)](https://p5js.org/zh-Hans/))
 2. [参考博客]([p5-vue：使用柏林噪声生成有趣的动态图案 – Sean 的个人博客 (smartline.cc)](https://smartline.cc/index.php/2020/05/24/p5-vue-perlin-noise/))
 3. [参考博客](https://blog.csdn.net/weixin_48388330/article/details/122606095)
 
-
-
-1. 如果您对组代码进行了大量修改，请在此处进行说明。
-   如果您使用了课程以外的工具和技术，请解释为什么使用它们以及它们是如何工作的。
-   如果您从互联网上复制了一项技术，请解释其工作原理、使用原因以及来源。
-    代码注释： 您提交的个人作品应在代码中包含出色的注释。它将包含小组代码中的所有注释以及您个人作品的注释。对于您在课程之外使用的任何工具和技术（也许您是从阅读 MDN 文档或之前的编程课程中学到的），请添加一个小注释；对于您从现有代码中使用的任何工具或技术（例如优酷教程或 p5.js 示例），请添加一个注释，并附上源代码链接。
