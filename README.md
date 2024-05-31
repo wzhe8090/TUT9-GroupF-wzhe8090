@@ -12,7 +12,7 @@ Each frame has a unique random seed, and noise value. to drive the particles to 
 
 ### 4. refer to the inspiration for the animation of your individual code; these can be images (still images or gifs). How do they affect your submission?
 
-Make up a random inspiration
+Make up a random inspiration，Animation taught in class about dividing squares on the Mona Lisa
 
 ### 5. A short technical explanation of how your individual code animates an image, with appropriate references.
 
